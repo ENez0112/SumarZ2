@@ -37,16 +37,61 @@ namespace UnitTestSumar
             Assert.AreEqual(esperado, resultado);
         }
         [TestMethod]
-        public void TestProducto()
+        public void TestAdd3()
+        {
+            // Arrange
+            SumaController sumaController = new SumaController();
+            int a = 3;
+            int b = -5;
+            int esperado = -2;
+
+            // ACT
+            int resultado = sumaController.Add(a, b);
+
+            // Assert
+            Assert.AreEqual(esperado, resultado);
+        }
+        [TestMethod]
+        public void TestProduct1()
         {
             // ARRANGE
-            SumaController sumaController = new SumaController();
+            MultController multController = new MultController();
             int a = 3;
             int b = 5;
             int esperado = 15;
 
             // ACT
-            int resultado = sumaController.Product(a, b);
+            int resultado = multController.Product(a, b);
+
+            // Assert
+            Assert.AreEqual(esperado, resultado);
+        }
+        [TestMethod]
+        public void TestProduct2()
+        {
+            // ARRANGE
+            MultController multController = new MultController();
+            int a = -3;
+            int b = -5;
+            int esperado = 15;
+
+            // ACT
+            int resultado = multController.Product(a, b);
+
+            // Assert
+            Assert.AreEqual(esperado, resultado);
+        }
+        [TestMethod]
+        public void TestProduct3()
+        {
+            // ARRANGE
+            MultController multController = new MultController();
+            int a = -3;
+            int b = 0;
+            int esperado = 0;
+
+            // ACT
+            int resultado = multController.Product(a, b);
 
             // Assert
             Assert.AreEqual(esperado, resultado);
